@@ -90,3 +90,7 @@ int main() {
     }
 
 }
+
+//Balance: 1000
+//Balance: 1001
+//Balance: 1000
