@@ -9,20 +9,20 @@ private:
     int balance;
     
 public:
-    Account(const string , int b) :type(t) balance(b) {}
+Account(const string& t, int b) : type(t), balance(b) {}
     void checkBalance() const { cout << "Balance: " << balance << endl; }
     void deposit(int amount) { balance += amount; }
     void withdraw(int amount) { balance -= amount; }
 
 };
 
-class Userinformation{
+class User{
 private:
     string CardNumber;
     int pin;
     Account checkingAccount;
 
-    User(string c, int p): cardNumber(c), pin(p) : cardNumber(c), pin(p), checkingAccount("checking", 1000) {}
+    User(string c, int p) : cardNumber(c), pin(p), checkingAccount("checking", 1000) {}
     const BankAccount& getCheckingAccount() const { return checkingAccount; }
     string getCardNumber() const { return cardNumber; }
     int getPin() const { return pin; }
@@ -84,8 +84,8 @@ int main() {
 
     if (Inserted && pin && accountSelected){
         atm.checkBalance();
-        atm.Deposit(100);
-        atm.withdraw(300);
+        atm.Deposit(1);
+        atm.withdraw(1);
         atm.checkBalance();
     }
 
